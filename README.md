@@ -1,13 +1,13 @@
-# 🚗 Car Classification with ConvNeXt / EVA02
+# Car Classification with ConvNeXt / EVA02
 
 A deep learning pipeline for classifying car images using ConvNeXt and EVA02 models.
 
-> ⚠️ This repository is part of my **personal research and archival work**.  
+> This repository is part of my **personal research and archival work**.  
 > It documents experiments and code developed during participation in the **Hecto AI Challenge 2025**.
 
 ---
 
-## 📖 Overview
+## Overview
 
 This project was created for the **Hecto AI Challenge 2025**
 
@@ -15,26 +15,26 @@ The objective was to classify car types from images using state-of-the-art visio
 
 ---
 
-## 💡 Key Learnings from the Competition
+## Key Learnings from the Competition
 
-- ⚠️ **I-JEPA representations** didn’t perform well in this task — likely due to my limited experience applying it to classification tasks, rather than a flaw in the method itself.
-- ✅ **Temperature Scaling** was useful for calibrating logits and improving log-loss.
-- 💎 **EVA-02 with RoPE (Rotary Position Embedding)** showed strong performance and robustness.
-
----
-
-## 🚀 Features
-
-- ✅ ConvNeXtV2 and EVA02 support via `timm`
-- ✅ CutMix augmentation
-- ✅ Focal Loss for handling class imbalance
-- ✅ EMA (Exponential Moving Average) for stable training
-- ✅ Mixed-precision training with AMP
-- ✅ YAML-based configuration system
+- **I-JEPA representations** didn’t perform well in this task — likely due to my limited experience applying it to classification tasks, rather than a flaw in the method itself.
+- **Temperature Scaling** was useful for calibrating logits and improving log-loss.
+- **EVA-02 with RoPE (Rotary Position Embedding)** showed strong performance and robustness.
 
 ---
 
-## 🧩 Folder Structure
+## Features
+
+- ConvNeXtV2 and EVA02 support via `timm`
+- CutMix augmentation
+- Focal Loss for handling class imbalance
+- EMA (Exponential Moving Average) for stable training
+- Mixed-precision training with AMP
+- YAML-based configuration system
+
+---
+
+## Code Structure
 
 ```
 car-classification/
@@ -60,7 +60,7 @@ car-classification/
 
 ---
 
-## 🏃 Getting Started
+## Getting Started
 
 ### 1. Install dependencies
 
@@ -104,7 +104,7 @@ python scripts/train.py --config configs/config.yaml
 
 ---
 
-## 📊 Example Result
+## Example Result
 
 <p align="center">
   <img src="./figure/project03.png" width="600"/>
@@ -114,6 +114,6 @@ python scripts/train.py --config configs/config.yaml
 
 ---
 
-## 🤝 License
+## License
 
 MIT License
