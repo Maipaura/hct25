@@ -95,7 +95,6 @@ def main(config):
     # Optional GradCAM
     if config.get("gradcam", False):
         class_names = dataset.features["label"].names
-        # Evaluate the target layer on the EMA model to ensure hooks are registered correctly
         target_layer = eval(config["target_layer"], {"model": ema_model})
         visualize_gradcam(ema_model, val_loader, class_names, target_layer)
 

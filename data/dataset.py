@@ -13,8 +13,6 @@ class HFDatasetWrapper(Dataset):
     def __getitem__(self, idx):
         example = self.hf_dataset[idx]
         img = example["image"]
-        if isinstance(img, list):
-            img = img[0]  # Handle possible list format from some HF datasets
         if self.transform:
             img = self.transform(img)
         label = example["label"]

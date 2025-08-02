@@ -28,8 +28,6 @@ class TestDataset(Dataset):
     def __getitem__(self, idx):
         example = self.hf_dataset[idx]
         img = example["image"]
-        if isinstance(img, list):
-            img = img[0]
         if self.transform:
             img = self.transform(img)
         return img, example["ID"]
@@ -42,7 +40,7 @@ def main(config, weights_path, sample_path, output_path):
     class_names = [col for col in sample_submission.columns if col != "ID"]
     num_classes = len(class_names)
 
-    test_dataset_name = config.get("test_dataset", "growingduck/Hecto_test")
+    test_dataset_name = config.get("test_dataset", "change this as path to test_dataset")
     test_dataset = load_dataset(test_dataset_name, split="train")
     test_dataset = test_dataset.cast_column("image", HFImage())
 

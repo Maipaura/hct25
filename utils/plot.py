@@ -5,7 +5,7 @@ from pytorch_grad_cam import GradCAM
 from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
 from pytorch_grad_cam.utils.image import show_cam_on_image
 
-# ✅ Run GradCAM and plot results
+# Run GradCAM and plot results
 def visualize_gradcam(model, val_loader, class_names, target_layer, save_path="gradcam.png"):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.eval().to(device)
