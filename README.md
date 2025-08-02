@@ -73,7 +73,7 @@ configs/config.yaml:
 
 ```yaml
 # Dataset & Paths
-dataset: growingduck/Hecto3
+dataset: hecto25
 val_split: 2.0e-1
 save_path: best_model_ema.pth
 plot_path: loss_curve.png
