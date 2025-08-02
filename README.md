@@ -9,7 +9,7 @@ A deep learning pipeline for classifying car images using ConvNeXt and EVA02 mod
 
 ## 📖 Overview
 
-This project was created for the **Hecto AI Challenge 2025**, where I placed **15th (private: 20th)** during a 4-day sprint.
+This project was created for the **Hecto AI Challenge 2025**
 
 The objective was to classify car types from images using state-of-the-art vision models and advanced training techniques.
 
