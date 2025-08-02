@@ -1,0 +1,22 @@
+# Dataset & Paths
+dataset: growingduck/Hecto3
+val_split: 2.0e-1
+save_path: best_model_ema.pth
+plot_path: loss_curve.png
+
+# Image & Batch Settings
+img_size: 448
+batch_size: 32
+
+# Model
+model_name: convnextv2_huge
+
+# Training
+epochs: 50
+lr: 5.0e-6
+weight_decay: 1.0e-2
+patience: 10
+
+# Grad-CAM settings
+gradcam: true
+target_layer: model.stages[3].blocks[-1]
